@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Wilson’s Snipe Animation</title>
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
     body { margin: 0; padding: 0; }
@@ -20,13 +20,13 @@
       font-size: 24px;
       border-radius: 4px;
       z-index: 1;
-      max-width: 60vw;
-      text-align: right;
+      max-width: 40vw;
+      box-sizing: border-box;
     }
 
     #date-display {
       position: absolute;
-      top: 10px;
+      top: 70px;
       left: 10px;
       background: rgba(255,255,255,0.85);
       padding: 6px 12px;
@@ -35,14 +35,16 @@
       font-size: 80px;
       z-index: 1;
       pointer-events: none;
-      max-width: 60vw;
       white-space: nowrap;
+      max-width: 50vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     #legend {
       position: absolute;
-      bottom: 25px;
-      right: 60px;
+      bottom: 40px;
+      right: 100px;  /* moved left from 60px to 100px to avoid compass */
       background: rgba(255,255,255,0.85);
       padding: 10px;
       border-radius: 4px;
@@ -52,25 +54,29 @@
       line-height: 24px;
     }
 
+    /* 🔧 Mobile styles */
     @media (max-width: 600px) {
       h1 {
         font-size: 18px;
         padding: 6px 12px;
-        max-width: 60vw;
-        text-align: right;
+        top: 10px;
+        right: 10px;
+        max-width: 65vw;
       }
 
       #date-display {
         font-size: 36px;
         padding: 4px 8px;
-        max-width: 60vw;
+        top: 60px;
+        left: 10px;
+        max-width: 65vw;
       }
 
       #legend {
         font-size: 14px;
         padding: 8px;
         bottom: 20px;
-        right: 20px;
+        right: 60px;  /* moved left from 20px to 60px to keep spacing consistent */
       }
     }
   </style>
