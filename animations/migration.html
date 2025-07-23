@@ -50,27 +50,32 @@
 
     /* 🔧 Mobile styles */
     @media (max-width: 600px) {
-      h1 {
-        font-size: 16px;
-        padding: 6px 12px;
-        top: 8px;
-        right: 8px;
-      }
+  #date-display {
+    font-size: 36px;
+    padding: 4px 8px;
+    top: 60px; /* moved down */
+    left: 8px;
+    max-width: 60vw;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
 
-      #date-display {
-        font-size: 36px;
-        padding: 4px 8px;
-        top: 8px;
-        left: 8px;
-      }
+  h1 {
+    font-size: 18px;
+    padding: 6px 12px;
+    top: 10px;
+    right: 8px;
+    max-width: 60vw;
+    text-align: right;
+  }
 
-      #legend {
-        font-size: 14px;
-        padding: 8px;
-        bottom: 20px;
-        right: 20px;
-      }
-    }
+  #legend {
+    font-size: 14px;
+    padding: 8px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
   </style>
 </head>
 <body>
