@@ -20,11 +20,13 @@
       font-size: 24px;
       border-radius: 4px;
       z-index: 1;
+      max-width: 40vw;
+      box-sizing: border-box;
     }
 
     #date-display {
       position: absolute;
-      top: 10px;
+      top: 70px;
       left: 10px;
       background: rgba(255,255,255,0.85);
       padding: 6px 12px;
@@ -33,6 +35,10 @@
       font-size: 80px;
       z-index: 1;
       pointer-events: none;
+      white-space: nowrap;
+      max-width: 50vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     #legend {
@@ -50,32 +56,29 @@
 
     /* 🔧 Mobile styles */
     @media (max-width: 600px) {
-  #date-display {
-    font-size: 36px;
-    padding: 4px 8px;
-    top: 10px; /* moved down */
-    left: 8px;
-    max-width: 60vw;
-    box-sizing: border-box;
-    white-space: nowrap;
-  }
+      h1 {
+        font-size: 18px;
+        padding: 6px 12px;
+        top: 10px;
+        right: 10px;
+        max-width: 65vw;
+      }
 
-  h1 {
-    font-size: 18px;
-    padding: 6px 12px;
-    top: 10px;
-    right: 8px;
-    max-width: 60vw;
-    text-align: right;
-  }
+      #date-display {
+        font-size: 36px;
+        padding: 4px 8px;
+        top: 60px;
+        left: 10px;
+        max-width: 65vw;
+      }
 
-  #legend {
-    font-size: 14px;
-    padding: 8px;
-    bottom: 20px;
-    right: 20px;
-  }
-}
+      #legend {
+        font-size: 14px;
+        padding: 8px;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
   </style>
 </head>
 <body>
