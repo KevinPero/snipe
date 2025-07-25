@@ -29,6 +29,10 @@ map.on('load', async () => {
   const hrData = await fetch('./All_Snipe_95_AKDEs_EstOnly.geojson').then(res => res.json());
   const colorMap = getColorMap(hrData.features, 'name');
 
+  
+  map.addControl(new mapboxgl.NavigationControl({ showCompass: true }), 'bottom-right');
+  map.addControl(new mapboxgl.ScaleControl({ maxWidth: 100, unit: 'metric' }), 'bottom-left');
+
   map.addSource('home_ranges', { type: 'geojson', data: hrData });
 
   map.addLayer({
