@@ -7,9 +7,6 @@ const map = new mapboxgl.Map({
   zoom: 3
 });
 
-map.addControl(new mapboxgl.NavigationControl({ showCompass: true }), 'bottom-right');
-map.addControl(new mapboxgl.ScaleControl({ maxWidth: 100, unit: 'metric' }), 'bottom-left');
-
 const birdColors = {
   // Dark blue
   'April': '#08306b', 'Beepo': '#08306b', 'Buzz': '#08306b',
