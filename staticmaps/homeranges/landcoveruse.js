@@ -2,15 +2,16 @@ import mapboxgl from 'https://cdn.skypack.dev/mapbox-gl';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2V2aW5wZXJvIiwiYSI6ImNtZDdtZ2N1bzBtMXAybXBzajM2c29rczcifQ.vmxgl2K5jzw5-8P3uqaQ3Q';
 
-map.addControl(new mapboxgl.NavigationControl({ showCompass: true }), 'bottom-right');
-map.addControl(new mapboxgl.ScaleControl({ maxWidth: 100, unit: 'metric' }), 'bottom-left');
-
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/satellite-streets-v12',
   center: [-96, 40],
   zoom: 3
 });
+
+map.addControl(new mapboxgl.NavigationControl({ showCompass: true }), 'bottom-right');
+map.addControl(new mapboxgl.ScaleControl({ maxWidth: 100, unit: 'metric' }), 'bottom-left');
+
 
 // Create distinct colors for each bird
 function getColorMap(features, property) {
