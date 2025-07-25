@@ -2,17 +2,70 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Wilson's Snipe Home Range Map</title>
+  <title>Wilson’s Snipe Home Range Map</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
   <style>
     body { margin: 0; padding: 0; }
     #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+    .map-title {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      font-family: sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 4px;
+      z-index: 1;
+      pointer-events: none;
+      max-width: 80%;
+      text-align: center;
+    }
+
+    .map-description {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      font-family: sans-serif;
+      font-size: 16px;
+      padding: 10px 16px;
+      border-radius: 4px;
+      z-index: 1;
+      pointer-events: none;
+      max-width: 90%;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .map-title {
+        font-size: 18px;
+        padding: 6px 12px;
+        top: 8px;
+      }
+      .map-description {
+        font-size: 14px;
+        padding: 6px 10px;
+        bottom: 8px;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="map-title">Wilson’s Snipe Home Ranges Map</div>
+
   <div id="map"></div>
+
+  <div class="map-description">
+    This map illustrates 95% AKDE home ranges from snipe tracked January–July in 2025.
+  </div>
+
   <script type="module" src="./landcoveruse.js"></script>
 </body>
 </html>
